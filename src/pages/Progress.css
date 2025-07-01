@@ -1,0 +1,385 @@
+/* ProgressManager.css */
+.progress-manager {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.progress-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.progress-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.progress-header h1::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #3498db;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.progress-header p {
+  color: #718096;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.progress-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-section label {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.filter-section input {
+  padding: 0.7rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.filter-section input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+}
+
+.clear-filter {
+  background: none;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.clear-filter:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+.toggle-form-btn {
+  background: linear-gradient(to right, #3498db, #2ecc71);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.toggle-form-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+}
+
+.toggle-form-btn.active {
+  background: linear-gradient(to right, #e74c3c, #c0392b);
+}
+
+.form-container {
+  margin-bottom: 2.5rem;
+}
+
+.form-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-card h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ebf4ff;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #e2e8f0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.submit-btn {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.cancel-btn {
+  background: #e2e8f0;
+  color: #4a5568;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.cancel-btn:hover {
+  background: #cbd5e0;
+  transform: translateY(-3px);
+}
+
+.error-message {
+  background: #fff5f5;
+  color: #e53e3e;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #e53e3e;
+  font-weight: 500;
+}
+
+.progress-list-container {
+  margin-top: 2rem;
+}
+
+.progress-list-container h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ebf4ff;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.loading-spinner {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: #a0aec0;
+}
+
+.empty-state h3 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.8rem;
+}
+
+.progress-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid #3498db;
+}
+
+.progress-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.patient-badge {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1.2rem;
+}
+
+.progress-info {
+  flex: 1;
+}
+
+.progress-info h3 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.progress-date {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.progress-content {
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.progress-note {
+  color: #4a5568;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.progress-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.progress-id, .patient-id {
+  background: #f1f5f9;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .progress-controls {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .progress-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .progress-manager {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .progress-manager {
+    padding: 1rem;
+  }
+  
+  .form-card {
+    padding: 1.5rem;
+  }
+}
