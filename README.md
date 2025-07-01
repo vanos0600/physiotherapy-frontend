@@ -7,7 +7,7 @@ This is the frontend of the Physiotherapy App, a responsive React application fo
 - React (with React Router)
 - Vite (for fast development server and build)
 - CSS (pure CSS, responsive design)
-- Tailwind CSS (if you are using it, otherwise remove this)
+- Tailwind CSS 
 
 ## Features
 - User authentication and login
