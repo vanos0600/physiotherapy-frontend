@@ -1,273 +1,140 @@
-/* Patients.css */
 .patients-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: 2rem auto;
   padding: 2rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8fafc;
-  min-height: 100vh;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.patients-header {
+.header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
-.patients-header h2 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  position: relative;
+.header-icon {
+  font-size: 2rem;
+  color: #3498db;
 }
 
-.patients-header h2::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #3498db;
-  margin: 0.5rem auto 0;
-  border-radius: 2px;
-}
-
-.patients-header p {
-  color: #718096;
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.patient-form {
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2.5rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 0.9rem 1.2rem;
-  border-radius: 8px;
-  border: 2px solid #e2e8f0;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.form-group input:focus {
-  outline: none;
-  border-color: #3498db;
-  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
-}
-
-.submit-btn {
-  width: 100%;
+.alert {
   padding: 1rem;
-  background: linear-gradient(to right, #3498db, #2ecc71);
-  color: white;
-  border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
-}
-
-.submit-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
-}
-
-.patient-list {
-  padding: 0;
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 1.8rem;
-}
-
-.patient-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  padding: 1.8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.3s ease;
-  border-top: 4px solid #3498db;
-}
-
-.patient-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
-
-.patient-card.deleting {
-  transform: scale(0.95);
-  opacity: 0.5;
-  background-color: #ffeef0;
-}
-
-.patient-info {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-.patient-avatar {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #3498db, #2ecc71);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
   font-weight: bold;
 }
 
-.patient-details h3 {
-  font-size: 1.3rem;
-  color: #2c3e50;
-  margin-bottom: 0.3rem;
-  font-weight: 600;
+.alert.error {
+  background-color: #ffe0e0;
+  color: #c0392b;
 }
 
-.patient-details p {
-  margin: 0.3rem 0;
-  color: #4a5568;
-  font-size: 0.95rem;
+.alert.success {
+  background-color: #e0ffe8;
+  color: #27ae60;
 }
 
-.patient-details p span {
-  font-weight: 600;
-  color: #2c3e50;
-}
-
-.delete-btn {
-  background: linear-gradient(to right, #e74c3c, #c0392b);
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  min-width: 100px;
-}
-
-.delete-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
-}
-
-.delete-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: none;
-}
-
-.deleting-text {
+.search-bar {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-.deleting-text::after {
-  content: "";
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  border-top-color: white;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-.loading-container {
-  text-align: center;
-  padding: 3rem;
-}
-
-.loading-spinner {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #3498db;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-  margin: 0 auto 1rem;
-}
-
-.empty-state {
-  text-align: center;
-  padding: 3rem;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  grid-column: 1 / -1;
-}
-
-.empty-icon {
-  font-size: 4rem;
   margin-bottom: 1.5rem;
-  color: #a0aec0;
+  background: #f4f4f4;
+  padding: 0.5rem;
+  border-radius: 8px;
 }
 
-.empty-state h3 {
-  color: #2d3748;
-  margin-bottom: 0.5rem;
+.search-icon {
+  margin-right: 0.5rem;
+  color: #555;
 }
 
-.empty-state p {
-  color: #718096;
-  font-size: 1.1rem;
+.search-bar input {
+  border: none;
+  flex: 1;
+  font-size: 1rem;
+  background: transparent;
+  outline: none;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .patients-container {
-    padding: 1.5rem;
-  }
-  
-  .patients-header h2 {
-    font-size: 2rem;
-  }
-  
-  .patient-form {
-    padding: 1.5rem;
-  }
-  
-  .patient-list {
-    grid-template-columns: 1fr;
-  }
+.patient-form {
+  margin-bottom: 2rem;
 }
 
-@media (max-width: 480px) {
-  .patients-container {
-    padding: 1rem;
-  }
-  
-  .patient-card {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-  }
-  
-  .delete-btn {
-    align-self: flex-end;
-  }
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.patient-form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-actions button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background-color: #3498db;
+  transition: background-color 0.3s;
+}
+
+.form-actions .cancel-btn {
+  background-color: #e74c3c;
+}
+
+.patient-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.patient-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.patient-card h3 {
+  margin-top: 0;
+}
+
+.patient-card .actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.patient-card .actions button {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.patient-card .actions button:hover {
+  color: #2980b9;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.empty {
+  text-align: center;
+  font-style: italic;
+  color: #777;
 }
