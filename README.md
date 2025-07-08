@@ -38,6 +38,7 @@ This is the frontend of a physiotherapy management web application. It allows th
 ### ❓ Forgot Password
 ![Forgot Password](./screenshots/forgot-password.png)
 
+
 ## 🛠️ Getting Started Locally
 
 ### Prerequisites
