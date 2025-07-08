@@ -1,74 +1,82 @@
-<<<<<<< HEAD
-# Physiotherapy App - Frontend
+# 🏥 Physiotherapy App - Frontend
 
-## Description
-This is the frontend of the Physiotherapy App, a responsive React application for managing patients, exercises, appointments, and therapy progress.
+This is the frontend of a physiotherapy management web application. It allows therapists to register patients, schedule appointments, and assign personalized exercise routines.
 
-## Technologies Used
-- React (with React Router)
-- Vite (for fast development server and build)
-- CSS (pure CSS, responsive design)
-- Tailwind CSS 
-
-## Features
-- User authentication and login
-- Dashboard to manage patients, exercises, appointments
-- Responsive UI for desktop and mobile
-- Connects to backend API for data management
-
-## Installation
-
-### Prerequisites
-- Node.js installed (v16+ recommended)
-- Backend API running and accessible
-
-### Steps
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/vanos0600/physiotherapy-frontend.git
-=======
-# 🏥 Fisioterapia App - Frontend
-
-Este es el frontend de una aplicación de gestión para fisioterapeutas. Permite registrar pacientes, ver citas y planificar ejercicios.
-
-## 🚀 Tecnologías utilizadas
+## 🚀 Technologies Used
 
 - ⚛️ React
-- 💅 CSS (estilos personalizados)
-- 📦 Axios (para llamadas HTTP)
+- 💅 Custom CSS & Tailwind CSS
+- 📦 Axios (HTTP requests)
 - 🧭 React Router DOM
-- 🌐 API REST backend (Node.js + Express)
+- 🌐 REST API backend (Node.js + Express)
 
-## 🎯 Funcionalidades principales
+## 🎯 Key Features
 
-- Registro y edición de pacientes
-- Visualización de citas programadas
-- Interfaz moderna y responsive
-- Conexión con backend en tiempo real
-## 📸 Capturas de pantalla
+- Register, update, and delete patients
+- View and manage scheduled appointments
+- Assign and track physical exercises
+- Responsive, mobile-friendly interface
+- Real-time communication with backend API
 
-### 🏠 Pantalla principal
-![Home](./screenshots/home.png)
+## 📸 Screenshots
 
-### 👩‍⚕️ Lista de pacientes
-![Pacientes](./screenshots/pacientes.png)
+### 🔐 Login Page
+![Login](./screenshots/login.png)
 
-### 📅 Calendario de citas
-![Citas](./screenshots/citas.png)
-_
+### 👤 Register Page
+![Register](./screenshots/register.png)
 
-## 🛠️ Instalación y ejecución local
+### 🧑‍🤝‍🧑 Patients List
+![Patients](./screenshots/patients.png)
+
+### 🏋️ Exercises
+![Exercises](./screenshots/exercises.png)
+
+### 📈 Progress Tracking
+![Progress](./screenshots/progress.png)
+
+### ❓ Forgot Password
+![Forgot Password](./screenshots/forgot-password.png)
+
+## 🛠️ Getting Started Locally
+
+### Prerequisites
+
+- Node.js (v16 or newer)
+- Backend API running and accessible
+
+### Installation
 
 ```bash
-# Clonar el repositorio
-git clone https://github.com/vano0600/fisioterapia-frontend-react.git
+# Clone the repository
+git clone https://github.com/vanos0600/physiotherapy-frontend.git
 
-# Ir al directorio
-cd fisioterapia-frontend-react
+# Go into the directory
+cd physiotherapy-frontend
 
-# Instalar dependencias
+# Install dependencies
 npm install
 
-# Ejecutar la app
-npm start
->>>>>>> dc3c9d6 (Actualizar README y agregar imágenes)
+# Start the development server
+npm run dev
+
+Project Structure
+bash
+Copy
+Edit
+physiotherapy-frontend/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   └── App.jsx
+├── screenshots/
+├── README.md
+└── package.json
+
+Contact
+Made with ❤️ by Oskar Vanegas
+GitHub: @vanos0600
+
+
